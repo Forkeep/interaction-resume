@@ -1,3 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+@keyframes breathe {
+    0% {
+        box-shadow: 0 0 6px 6px rgba(54, 59, 161, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 0 0 #369fa1;
+    }
+}
 
-/*# sourceMappingURL=default.css.map */
+.btn{
+    margin: 2px 2px;
+    transition: 1s;
+}
+
+.btn:hover{
+    background-color: yellow;
+
+    transition: 1s;
+}

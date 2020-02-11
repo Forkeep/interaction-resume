@@ -3,29 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>会动的简历</title>
+    <link rel="stylesheet" href="animate.css">
     <link rel="stylesheet" href="vendor/prism/prism.css">
     <link rel="stylesheet" href="vendor/github-markdown.css">
-    <script src="vendor/prism/prism.js"></script>
-    <script> src = "vendor/marked.min.js"</script>
     <link rel="stylesheet" href="default.css">
-    <link rel="stylesheet" href="main.css">
-    <script src="main.ts"></script>
+<!--    <link rel="stylesheet" href="main.css">-->
+    <style id="cssStyle">
+
+    </style>
 </head>
 <body>
 <div id="wrapper">
+<!--    <div id="speedone"><button class="btn">原速度</button></div>-->
+<!--    <div id="speedtwo"><button class="btn">二倍速</button></div>-->
+<!--    <div id="speedthree"><button class="btn">四倍速</button></div>-->
+
     <div id="code">
         <div class="computer">
             <div class="monitor">
-                <div class="inner-monitor">
-
-                </div>
+                <pre id="innerMonitor" class="inner-monitor">
+                </pre>
 
             </div>
 
         </div>
 
     </div>
-    <div id="resume"></div>
+    <div id="resume">
+        <pre id="resumePre" class="content">
+        </pre>
+    </div>
 </div>
+
+<script src="vendor/prism/prism.js"></script>
+<script src="vendor/marked.min.js"></script>
+<script src="main.js"></script>
+
 </body>
 </html>

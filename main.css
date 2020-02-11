@@ -26,6 +26,7 @@
   top: 50%;
   transform: translateY(-50%);
 }
+/*准备好我的电脑！*/
 #wrapper #code .computer {
   background-color: #333333;
   border-radius: 8px;
@@ -83,6 +84,7 @@
   right: 0;
   bottom: 0;
 }
+/*准备好一张纸来当做简历~*/
 #wrapper #resume {
   background-color: white;
   position: absolute;
@@ -101,4 +103,18 @@
   animation-direction: alternate-reverse;
 }
 
+#wrapper #resume #resumePre{
+  border:1px solid red;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: absolute;
+  width: 99%;
+  height: 99%;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+}
 /*# sourceMappingURL=main.css.map */
