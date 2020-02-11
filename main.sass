@@ -1,0 +1,114 @@
+$background-color: #add8e6
+$border-color: #369fa1
+$breath: rgba(54, 59, 161, 0.5)
+$debug-border: 1px solid red
+$computer-color: #333333
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+$backcoleo: #222
+
+@keyframes breathe
+  0%
+    box-shadow: 0 0 6px 6px $breath
+  100%
+    box-shadow: 0 0 0 0 $border-color
+
+
+#wrapper
+  position: relative
+  background-color: $background-color
+  height: 100vh
+  width: 100%
+
+  #code
+    position: relative
+    width: 45%
+    height: 90vh
+    margin-left: 30px
+    //相对定位时可采用这个方式来垂直居中
+    top: 50%
+    transform: translateY(-50%)
+
+    .computer
+      background-color: $computer-color
+      border-radius: 8px
+      width: 90%
+      height: 45%
+      position: relative
+      margin: 0 auto
+      top: 50%
+      transform: translateY(-70%)
+
+      &::before
+        content: ''
+        width: 30%
+        height: 15%
+        background-color: #222222
+        position: absolute
+        margin: 1px auto
+        left: 0
+        right: 0
+        top: 100%
+
+      &::after
+        position: absolute
+        content: ''
+        width: 58%
+        height: 8%
+        margin: 50px auto 0 auto
+        left: 0
+        right: 0
+        top: 100%
+        background-color: #222222
+        border:
+          top-left-radius: 10px
+          top-right-radius: 10px
+
+      .monitor
+        position: absolute
+        background-color: white
+        width: 94%
+        height: 92%
+        margin: auto auto
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+
+        .inner-monitor
+          overflow:
+            y: auto
+            x: hidden
+          position: absolute
+          width: 99%
+          height: 99%
+          margin: auto
+          top: 0
+          left: 0
+          right: 0
+          bottom: 0
+
+  #resume
+    background-color: white
+    position: absolute
+    border-radius: 10px
+    width: 45%
+    height: 90vh
+    //以下三句话可以使得垂直居中
+    margin: auto 30px
+    top: 0
+    bottom: 0
+    right: 0
+
+    border: 1px solid $border-color
+    animation:
+      name: breathe
+      delay: 0s
+      duration: 1s
+      iteration-count: infinite
+      direction: alternate-reverse
+
